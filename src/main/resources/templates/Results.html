@@ -5,7 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-    <p>Winner is you</p><br>
+    <p>You picked: </p><p th:text="${player}">message</p><br>
+    <p>The computer picked: </p><p th:text="${computer}">message</p><br>
     <p th:text="${result}">message</p>
 </body>
 </html>

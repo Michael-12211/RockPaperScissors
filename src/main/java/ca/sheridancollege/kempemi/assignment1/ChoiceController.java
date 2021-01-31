@@ -17,9 +17,71 @@ public class ChoiceController {
     @PostMapping ("determineWinner")
     public String determineResults(Model model, @RequestParam("gesture") String gesture){
 
+        String result = "";
+        int compChoice = (int) Math.floor(Math.random() * 3);
+        int res = 0; //0 means computer wins, 1 means tie, 2 means player wins
+        String compGesture = "";
+        if (compChoice == 0){
+            compGesture = "rock";
+            switch (gesture) {
+                case "rock":
+                    res = 1;
+                    break;
+                case "paper":
+                    res = 2;
+                    break;
+                case "scissors":
+                    res = 0;
+                    break;
+                }
+            }
+        else if (compChoice == 1){
+            compGesture = "paper";
+            switch (gesture) {
+                case "rock":
+                    res = 0;
+                    break;
+                case "paper":
+                    res = 1;
+                    break;
+                case "scissors":
+                    res = 2;
+                    break;
+            }
+        }
+        else {
+            compGesture = "scissors";
+            switch (gesture) {
+                case "rock":
+                    res = 2;
+                    break;
+                case "paper":
+                    res = 0;
+                    break;
+                case "scissors":
+                    res = 1;
+                    break;
+            }
+        }
+
+        if (gesture == "") {
+            gesture = "undercided";
+            res = 0;
+        }
+
+        if (res == 0){
+            result = "computer wins";
+        }
+        else if (res == 2) {
+            result = "player wins";
+        }
+        else{
+            result = "tie!";
+        }
+
         model.addAttribute("player", gesture);
-        model.addAttribute("computer", "unkown");
-        model.addAttribute("result", "unkown");
+        model.addAttribute("computer", compGesture);
+        model.addAttribute("result", result);
 
         return "Results";
     }
