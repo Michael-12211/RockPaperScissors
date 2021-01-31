@@ -12,8 +12,8 @@ public class ChoiceController {
         return "index";
     }
 
-    @PostMapping ("/determineWinner")
+    @PostMapping ("determineWinner")
     public String determineResults (){
-        return "/";
+        return "Results";
     }
 }
