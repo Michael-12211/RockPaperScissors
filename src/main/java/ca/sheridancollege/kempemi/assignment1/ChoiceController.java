@@ -65,15 +65,15 @@ public class ChoiceController {
         }
 
         if (gesture == "") {
-            gesture = "undercided";
+            gesture = "undecided";
             res = 0;
         }
 
         if (res == 0){
-            result = "computer wins";
+            result = "computer wins!";
         }
         else if (res == 2) {
-            result = "player wins";
+            result = "you win!";
         }
         else{
             result = "tie!";
