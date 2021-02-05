@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" th:href="@{myCss.css}">
 </head>
 <body>
     <form method = "post" action="determineWinner">
@@ -14,21 +15,20 @@
             </tr>
             <tr>
                 <td>
-                    <input type="radio" id="rock" name="gesture" value="rock" checked="True">
-                    <label for="rock">Rock</label>
+                    <p><input type="radio" id="rock" name="gesture" value="rock" checked="True">
+                        <label for="rock">Rock</label></p>
                 </td>
                 <td>
-                    <input type="radio" id="paper" name="gesture" value="paper">
-                    <label for="paper">Paper</label>
+                    <p><input type="radio" id="paper" name="gesture" value="paper">
+                        <label for="paper">Paper</label></p>
                 </td>
                 <td>
-                    <input type="radio" id="scissors" name="gesture" value="scissors">
-                    <label for="scissors">Scissors</label><br>
+                    <p><input type="radio" id="scissors" name="gesture" value="scissors">
+                        <label for="scissors">Scissors</label><br></p>
                 </td>
             </tr>
+            <tr><td></td><td><p><input type="submit"></p></td><td></td></tr>
         </table>
-        <br>
-        <input type="submit">
     </form>
 </body>
 </html>
