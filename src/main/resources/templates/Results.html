@@ -5,11 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-    <p th:text="'You picked: ' + ${player}">message</p>
-    <img th:src="${'../' + player + '.PNG'}" alt="Player's choice"><br><br>
-    <p th:text="'The computer picked: ' + ${computer}">message</p>
-    <img th:src="${'../' + computer + '.PNG'}" alt="Computer's choice"><br><br>
-    <p th:text="${result}">message</p><br><br>
-    <a th:href="@{/}">Play again</a>
+    <table>
+        <tr>
+            <td><img th:src="${'../' + player + '.PNG'}" alt="Player's choice"></td><td></td>
+            <td><img th:src="${'../' + computer + '.PNG'}" alt="Computer's choice"></td>
+        </tr>
+        <tr>
+            <td><p th:text="'You picked: ' + ${player}">message</p></td><td></td>
+            <td><p th:text="'The computer picked: ' + ${computer}">message</p></td>
+        </tr>
+
+        <tr><td></td><td><p th:text="${result}">message</p></td><td></td></tr>
+        <tr><td></td><td><a th:href="@{/}">Play again</a></td><td></td></tr>
+    </table>
 </body>
 </html>
