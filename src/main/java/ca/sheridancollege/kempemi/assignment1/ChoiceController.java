@@ -70,7 +70,7 @@ public class ChoiceController {
         }
 
         if (res == 0){
-            result = "computer wins!";
+            result = "the computer wins!";
         }
         else if (res == 2) {
             result = "you win!";

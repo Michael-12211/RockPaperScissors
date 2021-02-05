@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" th:href="@{myCss.css}">
 </head>
 <body>
     <table>
         <tr>
-            <td><img th:src="${'../' + player + '.PNG'}" alt="Player's choice"></td><td></td>
+            <td><img th:src="${'../' + player + '.PNG'}" alt="Player's choice"></td>
+            <td><img class="relation" th:src="${'../' + result + '.PNG'}" alt="Player's choice"></td>
             <td><img th:src="${'../' + computer + '.PNG'}" alt="Computer's choice"></td>
         </tr>
         <tr>
