@@ -6,15 +6,28 @@
 </head>
 <body>
     <form method = "post" action="determineWinner">
-        <img src="../rock.PNG" alt="Rock"><br>
-        <input type="radio" id="rock" name="gesture" value="rock">
-        <label for="rock">Rock</label><br>
-        <img src="../paper.PNG" alt="Paper"><br>
-        <input type="radio" id="paper" name="gesture" value="paper">
-        <label for="paper">Paper</label><br>
-        <img src="../scissors.PNG" alt="Scissors"><br>
-        <input type="radio" id="scissors" name="gesture" value="scissors">
-        <label for="scissors">Scissors</label><br>
+        <table>
+            <tr>
+                <td><img src="../rock.PNG" alt="Rock"><br></td>
+                <td><img src="../paper.PNG" alt="Paper"><br></td>
+                <td><img src="../scissors.PNG" alt="Scissors"><br></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" id="rock" name="gesture" value="rock" checked="True">
+                    <label for="rock">Rock</label>
+                </td>
+                <td>
+                    <input type="radio" id="paper" name="gesture" value="paper">
+                    <label for="paper">Paper</label>
+                </td>
+                <td>
+                    <input type="radio" id="scissors" name="gesture" value="scissors">
+                    <label for="scissors">Scissors</label><br>
+                </td>
+            </tr>
+        </table>
+        <br>
         <input type="submit">
     </form>
 </body>

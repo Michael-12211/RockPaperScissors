@@ -75,8 +75,12 @@ public class ChoiceController {
         else if (res == 2) {
             result = "you win!";
         }
-        else{
+        else if (res == 1){
             result = "tie!";
+        }
+        else{
+            result = "computer wins by default!";
+            gesture = "undecided";
         }
 
         model.addAttribute("player", gesture);
